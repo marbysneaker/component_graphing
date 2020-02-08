@@ -1,0 +1,29 @@
+.nav{
+    height: 150px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    align-items: flex-start;
+    align-content: space-around;  
+  }
+  .nav div{
+    padding:  5px;
+    border-radius: 15px;
+    
+  }
+  
+  .nav div:hover{
+    background: grey;
+  }
+  .nav div:active{
+    background-color: yellow;
+  }
+  /* Show the checkmark when checked */
+  .nav div:checked ~ .checkmark:after {
+    background-color: white;
+  }

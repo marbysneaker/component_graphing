@@ -1,0 +1,10 @@
+.drop{
+    text-align: center;
+    position: absolute;
+    right: 350px;
+    top: 40px;
+  }
+  .dropDown, .drop-submit {
+    width: 70px;
+    
+  }

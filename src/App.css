@@ -1,38 +1,98 @@
-.App {
+
+
+html{
+
+  background: var(--bg-color);
+  z-index: 10;
+  
+}
+:root {
+  --bg-color: #a2b9bc;
+  --bar-width: 95px;
+  }
+.title {
+  font-weight: bold;
   text-align: center;
+  margin-top: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.graph-main{
+  height: 650px;
+  width: 1000px;
+  border: 2px solid  #878f99;
+  /* border-width: 2px; */
+  /* border-color: black; */
+  background: #2e2e2e;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 50px;
+  text-align: center;
+  position: relative;
+  
+}
+/* <!-- Eur 100% Us 1.1091, 90% Aud 1.6132 62%, Gbp 0.8481 120 %, Brl :4.5188  22%, "PHP" 56.521  --> */
+.graph-main{
+  display: grid;
+  
+  grid-template-rows: 50px 200px 1fr;
+  grid-column-gap: 5px;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.graph-box{
+  
+  grid-row: 3;
+} 
+.graph-box{
+  width: 1000px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  
+  
+}
+.graph-title {
+  grid-row: 1;
+  grid-column: 1 / span 10;
+  background: #878f99;
+  font-size: large;
+  padding-top: 10px;
+
+  box-sizing: content-box;
+ 
+} 
+    
+.graph-bar{
+  width: var(--bar-width);
   color: white;
+  box-sizing: border-box;
+  transition: transform .3s;
+  background: linear-gradient(#003f5c, #ffa600 )
+}
+.graph-bar:nth-child(odd) {
+  background: linear-gradient(#6f5a7e, #ffae8f )
+}
+.graph-bar:hover{
+  -ms-transform: scale(1.2); 
+  -webkit-transform: scale(1.2); 
+  transform: scale(1.2);
+  z-index: 2;         
 }
 
-.App-link {
-  color: #61dafb;
+.display-box{
+  padding: 12.5px;
+  text-align: center;
+  background: #ffae8f ;
+  box-sizing: border-box;
+  width: 250px;
+  height: 50px;
+  position: absolute;
+  top:170px;
+  right: 250px;
+  border-radius: 20px;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+

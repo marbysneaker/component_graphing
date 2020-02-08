@@ -1,0 +1,29 @@
+.graph-box{
+  
+    grid-row: 3;
+  }
+.graph-box{
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    
+    
+  }
+  .graph-bar{
+    width: var(--bar-width);
+    color: white;
+    box-sizing: border-box;
+    transition: transform .3s;
+    background: linear-gradient(#003f5c, #ffa600 )
+  }
+  .graph-bar:nth-child(odd) {
+    background: linear-gradient(#6f5a7e, #ffae8f )
+  }
+  .graph-bar:hover{
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2);
+    z-index: 2;         
+  }
